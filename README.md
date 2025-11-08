@@ -59,8 +59,8 @@ The main goals:
 
 
 Classification Report:
-      |       | precision  |  recall | f1-score  | support |
-
+      |   objects    | precision  |  recall | f1-score  | support |
+|--------:|:------:|:--------:|:------:|:--------|
   |  airplane   |  0.6792  |  0.0720  |  0.1302   |   1000  |
 |  automobile   |  0.5975  |  0.3400   | 0.4334    |  1000|
   |      bird   |  0.4654  |  0.0740  |  0.1277   |   1000|
