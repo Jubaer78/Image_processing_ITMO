@@ -1,46 +1,46 @@
-# CIFAR-10 Image Classification using EfficientNetB0 + TensorBoard
+# Классификация изображений CIFAR-10 с использованием EfficientNetB0 + TensorBoard
 
-## 🧩 1. Task Description
-This project solves the **image classification** problem using a **deep convolutional neural network (EfficientNetB0)**.  
-The main goals:
-- Train a model to classify 10 object categories from the CIFAR-10 dataset.
-- Visualize training performance (loss, accuracy) in **TensorBoard**.
-- Evaluate precision, recall, F1-score for each class.
-- Fine-tune the pretrained EfficientNet model for better accuracy.
+## 🧩 1. Описание задачи
+Этот проект решает задачу классификации изображений с использованием глубокой сверточной нейронной сети (EfficientNetB0).
+Основные цели:
+- Обучить модель для классификации 10 категорий объектов из набора данных CIFAR-10.
+- Визуализировать производительность обучения (потери, точность) в TensorBoard.
+- Оценить точность (precision), полноту (recall) и F1-меру для каждого класса.
+- Дообучить предварительно обученную модель EfficientNet для повышения точности.
 
-**Tasks implemented:**
-- Data loading, visualization, and preprocessing (normalization, one-hot encoding).
-- Model creation using transfer learning.
-- Model training in two stages:  
-  1️⃣ Frozen base model training  
-  2️⃣ Fine-tuning selected layers  
-- Experiment tracking with TensorBoard (loss & accuracy curves).
-- Model evaluation and metrics visualization (confusion matrix, class metrics).
+**Реализованные задачи**
+- Загрузка данных, визуализация и предварительная обработка (нормализация, one-hot кодирование).
+- Создание модели с использованием трансферного обучения.
+- Обучение модели в два этапа:  
+  1️⃣ Обучение с замороженной базовой моделью  
+  2️⃣ Тонкая настройка выбранных слоев  
+- Отслеживание экспериментов с TensorBoard (кривые потерь и точности).
+- Оценка модели и визуализация метрик (матрица ошибок, метрики по классам).
 
 ---
 
-## 🗂️ 2. Dataset Description
+## 🗂️ 2. Описание набора данных
 
-**Dataset:** [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
+**Набор данных:** [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 <!-- Image in the same directory -->
-![Dataset](./dataset.png)
+![Dataset](Images/dataset.png)
 
 **Composition:**
-- **Total images:** 60,000  
-  - 50,000 for training  
-  - 10,000 for testing
-- **Classes (10 categories):**
+- **Всего изображений:** 60,000  
+  - 50,000 для обучения
+  - 10,000 для тестирования
+- **Классы (10 категорий):**
   - airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
-- **Image size:** 32x32 pixels, RGB (3 channels)
+- **Размер изображений:** 32x32 пикселя, RGB (3 канала)
 
 ---
 
-## 🧠 3. Learning Results & Experiments
+## 🧠 3. Результаты обучения и эксперименты
 
 **Model:** EfficientNetB0 (pretrained on ImageNet, fine-tuned on CIFAR-10)
 
-### Training Setup
+### Настройки обучения
 - Optimizer: `Adam`
 - Loss: `categorical_crossentropy`
 - Epochs: 10
@@ -51,7 +51,7 @@ The main goals:
   - TensorBoard (for logging)
 
 ### Experiment Results
-| Metric | Value |
+| Метрика | Значение |
 |--------:|:------|
 | Final Test Accuracy | 0.3620 |
 | Final Test Loss | 1.7113 |
@@ -59,8 +59,8 @@ The main goals:
 | Recall  | 0.3620 |
 | F1-Score | 0.3135 |
 
-![Value of Accuracy](./accuracy.png)
-![Value of Loss](./loss.png)
+![Value of Accuracy](Images/accuracy.png)
+![Value of Loss](Images/loss.png)
 ## 📊 Classification Report
 
 | Class | Precision | Recall | F1-Score |
@@ -82,11 +82,8 @@ The main goals:
 - Confusion matrix
 - Class-wise precision, recall, and F1 comparison
 - Sample predictions with confidence scores
-
-![Sample Predictions](./sample.png)
----
+![Value of Loss](Images/sample.png)
 
 ## Requirements
 Install dependencies:
-```bash
 pip install -r requirements.txt
