@@ -61,9 +61,10 @@
 
 ![Value of Accuracy](Images/accuracy.png)
 ![Value of Loss](Images/loss.png)
-## 📊 Classification Report
 
-| Class | Precision | Recall | F1-Score |
+## 📊 Отчет о классификации
+
+| Класс | Precision | Recall | F1-Score |
 |-------|-----------|--------|----------|
 | airplane | 0.6792 | 0.0720 | 0.1302 |
 | automobile | 0.5975 | 0.3400 | 0.4334 | 
@@ -77,13 +78,13 @@
 | truck | 0.4865 | 0.5220 | 0.5036 |
 
 
-## 📊 4. Visualizations
-- Training/validation loss and accuracy curves (via TensorBoard)
-- Confusion matrix
-- Class-wise precision, recall, and F1 comparison
-- Sample predictions with confidence scores
+## 📊 4. Визуализации
+- Кривые потерь и точности обучения/валидации (через TensorBoard)
+- Матрица ошибок
+- Точность, полнота и сравнение по классам
+- Примеры прогнозов с оценками достоверности
 ![Value of Loss](Images/sample.png)
 
-## Requirements
-Install dependencies:
+## Требования
+Установка зависимостей:
 pip install -r requirements.txt
